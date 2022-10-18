@@ -146,6 +146,8 @@ class OculusTouchPyImpact(Controller):
                                                                       window_height=self.window_h,
                                                                       title_bar_height=int(configs["title_bar_height"]),
                                                                       monitor_index=int(configs["monitor_index"]))
+
+        resp = self.communicate({"send_oculus_touch_buttons":True})
         # Initialize PyImpact.
         rng = np.random.RandomState(0)
         self.py_impact = PyImpact(rng=rng)
