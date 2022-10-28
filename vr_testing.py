@@ -434,7 +434,8 @@ class OculusTouchPyImpact(Controller):
         self.communicate([])
         # Reset the VR rig.
         self.vr.reset()
-        self.communicate({"$type": "send_oculus_touch_buttons", "frequency": "always"})
+        self.communicate([{"$type": "create_vr_rig", "rig_type": "oculus_touch_robot_hands", "sync_timestep_with_vr": True},
+                            {"$type": "send_oculus_touch_buttons", "frequency": "always"},])
         # Load the next scene.
         # self.communicate([Controller.get_add_scene(scene_name=OculusTouchPyImpact.SCENE_NAMES[self.scene_index])])
 
