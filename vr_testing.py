@@ -330,7 +330,7 @@ class OculusTouchPyImpact(Controller):
             vel_pathlen2 = int(path_len/2 - math.ceil(self.discont_len/2))
             # velocity2 = self.get_poly_velocity(vel_pathlen2)
             velocity2 = get_poly_velocity2(vel_pathlen2, self.discont_len)
-            print("*****", np.size(velocity2))
+
         else:
             pre_velocity2 = np.linspace(1.5,0.3,path_len2)
             between_vel = np.repeat([0.000001], self.discont_len)
